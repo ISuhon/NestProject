@@ -6,11 +6,11 @@ export class ArticlesService {
     private prisma = new PrismaClient();
 
   async getAllPosts() {
-    return this.prisma.post.findMany();
+    return this.prisma.article.findMany();
   }
 
   async getPostById(id: number) {
-    return this.prisma.post.findUnique({
+    return this.prisma.article.findUnique({
       where: { id },
     });
   }
